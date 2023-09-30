@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="display-container">
+     <input readonly placeholder="password" class="display" data-passwordDisplay>
+     <button>
+        <span data-copyMsg></span>
+        <img src="" alt="copy" width="23" height="23">
+     </button data-copy>
+
+        </div>
+        <div class="input-container">
+            <div length-conatainer>
+                <p>password Length</p>
+                <p data-lenghtNumber>0</p>
+            </div>
+            <!-- slider-->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lenghtslider>
+            <!-- check box -->
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include uppercase</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include lowercase</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include symbols</label>
+            </div>
+            <!-- strength section -->
+            <div class="strength-conrainer">
+                <p>Strength</p>
+                <div data-indicator></div>
+            </div>
+            <!--Generate passords  -->
+            <button class="Generator-button">Generator passord</button>
+        </div>
+    </div>
+</body>
+<script>
+    const inputSlider = document.querySelector("[data-lenghtslide]");
+    const lengthDisplay = document.querySelector("[data-lengthNumber]");
+    const passwordDisplay = document.querySelector("[data-passwordDisplay]");
+    const copyBtn = document.querySelector("[data-copyMsg]");
+    const uppercasecheck = document.querySelector("#uppercase");
+    const lowercaseCheck = document.querySelector("#lowercase");
+    const numbersCheck = document.querySelector("#numbers");
+    const symbolsCheck = document.querySelector("#symbols");
+    const indicator = document.querySelector("[data-indicator]");
+    const generatorBtn = document.querySelector(".Generator-button");
+    const allCheckBox = document.querySelector("input[type=checkbox]");
+    const symbol = '!@#$%^&*)(_+<>?|// ';
+    
+    let passord = "";
+    let passwordLength = 10;
+    let checkCout = 1;
+
+    //ste stregth circle color t  grey
+    function handleSlider(){
+        inputSlider.value = passwordLength;
+        lengthDisplay.innerHTML = passwordLength;
+        //
+    }
+
+    function setIndicator(color){
+        indicator.style.background = color;
+    }
+
+    function getRndInteger(min, max){
+        return Math.floor(Math.rendom) * (max - min) + min;
+    }
+
+    function generateRandomNumber(){
+        return getRndInteger(0, 9);
+    }
+
+    function generateLowerCase(){
+        return String.fromCharCode (getRndInteger(97, 123))
+    }
+
+    function generateUpperCase(){
+        return String.fromCharCode (getRndInteger(65, 91))
+    }
+
+    function generateSymbol(){
+        const randNum = getRndInteger(0, symbol.length);
+        return symblos.charAt(randNum);
+    }
+
+    funcion calcStrength(){
+        let hasUpper = false;
+        let hasLower = false;
+        let hasNum = false;
+        let hasSym = false;
+        if(uppercasecheck.checked)hasUpper = true;
+        if(lowercaseCheck.checked)hasLower = true;
+        if(numbersCheck.checked)hasNum = true;
+        if(symbolsCheck.checked)hasSym = true;
+        
+        if(hasUpper && hasLower && (hasNum || hasSym) && passwordLength >= 8){
+            setIndicator("#0f0");
+        }else if(
+        (hasLower   || hasUpper) && 
+    ( hasNum || hasUpper) &&
+    passwordLength >= 6
+    ){
+        setIndicator("#ff0")
+    }else{
+        setIndicator("#f00")
+    }
+        
+    } 
+    async function copyContent(){
+        try{
+            await navigator.clipboard.writeText(passwordDisplay.value);
+            coptMsg.innerHTML = "copied";
+        }
+        catch(e){
+            coptMsg.innerHTML = "active";
+        }
+        setTimeout( () => {
+            copyMsg.classList.remove("active");
+        }, 2000);
+    }
+
+    inputSlider.addEventListener('input', (e) => {
+        passwordLength = e.target.value;
+        handleSlider();
+    })
+
+    copyBtn.addEventListener('click', () => {
+        if(passwordDisplay.value)
+        copyContent
+    })
+
+
+    
+
+    
+
+
+
+</script>
+</html>
