@@ -11,11 +11,12 @@ book.character2 = "shudaa";
 book.character3 =  "binti";
 book.content = {};
 book.content.chapter1 = " ilahabaad";
-console.log(book.auconsole.log(aditya > govind);
+console.log(book.au)
+console.log(aditya > govind);
 let gov = "govind";
 let adi = "aditya";
 gov === adi
-console.log(gov = adi)thor)
+
 console.log(book);
 
 let govindBD = [0, 6, 0 ,9, 2003 ];
@@ -42,9 +43,6 @@ let govindS = 6000;
 let adityaS = 10000;
  console.log(adityaS.valueOf !== govindS);
 console.log(aditya > govind);
-let gov = "govind";
-let adi = "aditya";
-gov === adi
-console.log(gov = adi)
+
 
 
