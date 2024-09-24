@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard</title>
+    <style>
+         #insert{
+            text-align: center;
+            margin-top: 50px;
+         }
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <div id="insert">
+            hii
+            <h2></h2>
+        </div>
+    </div>
+</body>
+<script >
+    const arr = []
+    console.log(arr)
+    const h2 = document.querySelector('h2');
+   const insert =  document.querySelector("#insert");
+    window.addEventListener('keydown', function(e){
+        const inst = insert.textContent = e.key
+        arr.push(inst)
+        
+
+
+
+    })
+
+</script>
+</html>
