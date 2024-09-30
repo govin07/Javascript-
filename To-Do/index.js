@@ -28,10 +28,10 @@ const listContainer = document.querySelector('#list-container')
  })
  
 
-//  function savedata(){
-//     localStorage.setItem('data', listContainer.innerHTML)
-//  }
-//  function dataGet(){
-//    listContainer.innerHTML =  localStorage.getItem('data')
-//  }
-//  dataGet()
+ function savedata(){
+    localStorage.setItem('data', listContainer.innerHTML)
+ }
+ function dataGet(){
+   listContainer.innerHTML =  localStorage.getItem('data')
+ }
+ dataGet()
