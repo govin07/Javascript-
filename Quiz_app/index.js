@@ -23,14 +23,37 @@ const questionPart = document.querySelector('#question-part');
 const buttons = document.querySelector('.answer-btn');
 const nextBtn = document.querySelector('#next')
 
-function start(){
-    const button = document.createElement('button');
-    questions.forEach((item) => {
-         questionPart.textContent = item.question
-         button.classList.add('btn')
-         button.textContent = item.option;
-         buttons.appendChild(button)
-         
+let currentQuestonIndex = 0;
+let score = 0
+
+function startQuiz(){
+    currentQuestonIndex = 0;
+    score = 0;
+    showQuestion()
+} 
+function showQuestion(){
+    let currentQuestiion = questions[currentQuestonIndex];
+    let questiNumber = currentQuestonIndex + 1 ;
+    questionPart.textContent =  questiNumber + "." + currentQuestiion.question
+
+    currentQuestiion.option.forEach((answer) => {
+        // console.log(answer)
+        const button = document.createElement('button');
+        button.classList.add("btn")
+        button.textContent = answer
+        buttons.appendChild(button)
+        button.addEventListener('click' ,function(e){
+            if(e.target.innerText == "New Delhi"){
+                button.style.backgroundColor = "green";
+            }
+                
+            
+        })
+
     })
 }
-start()
+nextBtn.addEventListener('click', ()=>{
+currentQuestonIndex++;
+showQuestion()
+})
+startQuiz()
