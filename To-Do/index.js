@@ -1,7 +1,8 @@
 const inputBox = document.querySelector('input');
 const buttons = document.querySelector('button');
 const listContainer = document.querySelector('#list-container')
-let button = document.createElement('button');
+// const button = document.createElement('button');
+// let li = document.createElement('li');
 
  buttons.addEventListener('click', function(e){
   if(inputBox.value === ''){
@@ -12,7 +13,7 @@ let button = document.createElement('button');
     li.textContent = inputBox.value
     console.log(li)
     listContainer.appendChild(li);
-    // let button = document.createElement('button');
+    let button = document.createElement('button');
     button.classList.add('button')
     button.innerHTML = "\u00d7";
     li.appendChild(button)
@@ -20,6 +21,10 @@ let button = document.createElement('button');
   inputBox.value = "";
   savedata()
 
+ })
+ listContainer.addEventListener('click' , function(e){
+  e.target.button == "gray"
+  listContainer.parentElement.nodeName
  })
  
 
