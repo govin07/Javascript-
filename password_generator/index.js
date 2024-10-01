@@ -9,11 +9,12 @@ let lowerCase = "abcdefghijklmnopqistuvwxyz"
 let number = "0123456789";
 let symbols = "~!@#$%^&*()_+|?><,./";
 let allChats = UpperCase + lowerCase + number + symbols;
-
+//on click function password generating
 GenerateBtn.addEventListener('click',passSection)
+// on click function for copy text from input field
 copyBtn.addEventListener('click', textCopy)
 
-
+//This function is generating random password
 function passSection(){
     let password = "";
     password  += UpperCase[Math.floor(Math.random() * UpperCase.length)];
