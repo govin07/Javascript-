@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(195, 223, 195);
+}
+#heading_title{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 64px;
+    color: rgba(67, 224, 10, 0.721);
+    
+}
+#Today_title{
+    color: grey;
+}
+.app-container{
+    box-shadow: 5px 5px 5px 0.5px black ;
+    height: fit-content;
+    padding: 12px 40px;
+    border-radius: 10px;
+    margin-inline: auto;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff ;
+}
