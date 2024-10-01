@@ -44,7 +44,7 @@ body{
     margin-right: 10px;
    
 }
-.input-box p{
+.input-box-container p{
     padding: 10px;
     width: 80%;
     background-color: white;
@@ -56,7 +56,7 @@ body{
     border: none;
     outline: none;
 }
-.input-box p img{
+.input-box-container p img{
 
     width: 35px;
     position: absolute;

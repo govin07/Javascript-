@@ -1,6 +1,6 @@
 const createBtn = document.querySelector('#Create-Btn')
 const inputBox = document.querySelector('.input-box-container')
-// const inputDlt = document.querySelector('#Dlt');
+const DltBtn = document.querySelector('.input-box') 
 
 createBtn.addEventListener('click', CreatingInputBOx)
 
@@ -10,7 +10,7 @@ function CreatingInputBOx(){
 const img = document.createElement('img');
 img.setAttribute('id', 'Dlt')
 img.src = "notes-app-img/images/delete.png";
-p.className = "input-box"
+img.className = "input-box"
 p.setAttribute('contenteditable', 'true');
 
 p.appendChild(img)
@@ -19,14 +19,11 @@ inputBox.appendChild(p)
 
 }
 
-// input-box-container.addEventListener('click', (e)=>{
-//     if(e.target.tagName === "IMG"){
-//         // inputBox.parentElement.remove()
-//     }
-// })
+DltBtn.addEventListener('click', (e)=>{
+    
+    if(e.target.tagName === "IMG"){
+    
+         DltBtn.parentElement.remove()
+    }
+})
 
-// inputDlt.addEventListener('click',
-//     () => {
-//          console.log("govind")
-//     }
-// )
