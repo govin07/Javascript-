@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #5A48C9
+}
+.main{
+    width: 80%;
+    min-width: 600px;
+    margin: 12%;
+    padding: 15px 10px;
+}
+.main h1{
+    color: white ;
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.main h1 span{
+    color: rgb(218, 218, 34);
+}
+.Age-input{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 45%;
+    height: fit-content;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #8C7DD9 ;
+}
+.Age-input input{
+    padding: 10px;
+    border: none;
+    outline: 0;
+    width: 70%;
+    height: 30px;
+    border-radius: 8px;
+    
+}
+.Age-input button{
+    background-color: yellow;
+    border: 0;
+    width: 25%;
+    border-radius: 8px;
+    color: black;
+}
+.Age-display{
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+}
+.Age-display span{
+    color: yellow;
+}
