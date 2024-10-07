@@ -27,13 +27,23 @@ header nav input , button{
     font-size: 15px;
     border-radius: 5px;
 }
+header nav button{
+    cursor: pointer;
+    background-color: rgb(153, 39, 39);
 
+}
 
 @media (max-width: 600px) {
     header nav{
        flex-direction: column;
        gap: 15px;
+       margin-right: 10px;
 
     }
     
+}
+.recipe-container{
+    margin-top: 15px;
+    text-align: center;
+    color: white;
 }
