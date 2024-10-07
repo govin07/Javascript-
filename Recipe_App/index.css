@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+}
+header nav{
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+header nav h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    word-spacing: 2px;
+}
+header nav input , button{
+    padding: 10px;
+    border: 0;
+    margin-right: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 600px) {
+    header nav{
+       flex-direction: column;
+       gap: 15px;
+
+    }
+    
+}
